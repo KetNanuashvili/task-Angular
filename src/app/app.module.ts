@@ -4,16 +4,27 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
+import { TaskService } from './services/task.service';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule ,
+    
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+   [TaskService], 
   ],
   bootstrap: [AppComponent]
 })
