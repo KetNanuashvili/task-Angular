@@ -7,8 +7,7 @@ import { Task } from '../model/task';
   providedIn: 'root',
 })
 export class TaskService {
-  private serviceURL: string = 'http://localhost:3000/tasks';
-
+  private serviceURL: string = 'http://localhost:3001/tasks'; 
   constructor(private http: HttpClient) {}
 
   addTask(task: Task): Observable<Task> {

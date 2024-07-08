@@ -1,6 +1,4 @@
 export class Task {
-    id?: number;  
-    task_name: string = '';
-    description?: string;
-  }
-  
+  id?: number;  
+  task_name: string = '';
+}
